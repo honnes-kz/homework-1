@@ -1,21 +1,5 @@
 package com.narxoz.rpg.character;
 
-/**
- * Example concrete implementation of a Character.
- *
- * This is provided as a reference to help you get started.
- * Study this implementation, then create similar classes for Mage, Archer, etc.
- *
- * Notice:
- * - How attributes are initialized
- * - How methods are implemented
- * - The structure you should follow for other character types
- *
- * TODO: Create similar implementations for:
- * - Mage (high mana/intelligence, low health/strength)
- * - Archer (balanced stats, ranged combat)
- * - (Optional) Additional classes: Rogue, Paladin, etc.
- */
 public class Warrior implements Character {
 
     private String name;
@@ -24,25 +8,34 @@ public class Warrior implements Character {
     private int strength;
     private int intelligence;
 
-    // TODO: Add fields for equipped weapon and armor
-    // Think: Should Warrior know about its equipment?
-
+    private String weapon;
+    private String armor;
 
     public Warrior(String name) {
         this.name = name;
-        // Warrior stats: high health and strength, low mana and intelligence
         this.health = 150;
         this.mana = 30;
         this.strength = 80;
         this.intelligence = 20;
+
+        this.weapon = "no weapon";
+        this.armor = "no armor";
     }
 
-    // TODO: Implement methods from Character interface
-    // You need to define those methods in Character interface first!
-
-    // Example method structure:
     public String getName() {
         return name;
+    }
+    public int getHealth(){
+        return health;
+    }
+    public int GetMana(){
+        return mana;
+    }
+    public int getStrength(){
+        return Strength;
+    }
+    public int getIntelligence(){
+        return intelligence;
     }
 
     public void displayStats() {
@@ -57,10 +50,16 @@ public class Warrior implements Character {
         System.out.println(name + " uses BERSERKER RAGE! Strength temporarily increased!");
     }
 
-    // TODO: Add equipment-related methods
-    // Examples:
-    // - void equipWeapon(Weapon weapon)
-    // - void equipArmor(Armor armor)
-    // - void displayEquipment()
-
+    public void equipWeapon(String weapon){
+        this.weapon = weapon;
+        System.out.println(name + "equipped weapon" + weapon);
+    }
+    public void equipArmor(String armor){
+        this.armor = armor;
+        System.out.println(name + "equipped armor" + armor);
+    }
+    public void displayEquipment(){
+        System.out.println("Weapon:" + weapon);
+        System.out.println("Armor:" + armor);
+    }
 }

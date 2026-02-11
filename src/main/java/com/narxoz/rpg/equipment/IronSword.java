@@ -1,28 +1,5 @@
 package com.narxoz.rpg.equipment;
 
-/**
- * Example concrete weapon implementation - Medieval theme.
- *
- * This is provided as a reference to help you understand the structure.
- * Study this, then create other weapons and armor for different themes.
- *
- * Notice:
- * - This implements the Weapon interface
- * - It has specific attributes for this weapon type
- * - It belongs to the "Medieval" equipment family
- *
- * TODO: Create similar implementations for:
- * Weapons:
- * - WizardStaff (Magic theme)
- * - Longbow (Ranger theme)
- * - Other weapons you imagine...
- *
- * Armor:
- * - PlateArmor (Medieval theme)
- * - EnchantedRobes (Magic theme)
- * - LeatherArmor (Ranger theme)
- * - Other armor you imagine...
- */
 public class IronSword implements Weapon {
 
     private int damage;
@@ -33,10 +10,6 @@ public class IronSword implements Weapon {
         this.weaponType = "Sword";
     }
 
-    // TODO: Implement methods from Weapon interface
-    // Define those methods in the Weapon interface first!
-
-    // Example method structure:
     public int getDamage() {
         return damage;
     }
@@ -50,12 +23,58 @@ public class IronSword implements Weapon {
         System.out.println("Damage: " + damage);
         System.out.println("Type: " + weaponType);
     }
+}
+public class WizardStaff implements Weapon{
+    
+    private int damage;
+    private String weaponType;
+    private int manaBoost;
 
-    // TODO: Consider adding theme-specific properties
-    // For example, Medieval weapons might have:
-    // - Durability
-    // - Weight
-    // Magic weapons might have:
-    // - Mana boost
-    // - Spell power
+    public WizardStaff(){
+        this.damage = 15;
+        this.weaponType = "Staff";
+        this.manaBoost = 40;
+    }
+    public int getDamage(){
+        return Damage;
+    }
+    public String getWeaponType(){
+        return weaponType;
+    }
+    public String getWeaponInfo(){
+        return "Wizard Staff (Magic) - a staff infused with magical energy";
+    }
+    public void displayInfo(){
+        System.out.println("Weapon: " + getWeaponInfo);
+        System.out.println("Damage: " + damage);
+        System.out.println("ManaBoost" + manaBoost);
+        System.out.println("Type: " + weaponType);
+    }
+}
+public class Longbow implements Weapon{
+    
+    private int damage;
+    private String weaponType;
+    private int range;
+
+    public  Longbow(){
+        this.damage = 20;
+        this.weaponType = "Bow";
+        this.range = 100;
+    }
+    public int getDamage(){
+        return damage;
+    }
+    public String getWeaponType(){
+        return weaponType;
+    }
+    public String getWeaponInfo(){
+        return "LongBow (Ranger) - A precise ranged weapon";
+    }
+    public displayInfo(){
+        System.out.println("Weapon: " + getWeaponInfo);
+        System.out.println("Damage: " + damage);
+        System.out.println("Range" + range);
+        System.out.println("Type: " + weaponType);
+    }
 }

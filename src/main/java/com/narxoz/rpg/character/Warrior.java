@@ -1,5 +1,8 @@
 package com.narxoz.rpg.character;
 
+import com.narxoz.rpg.equipment.Weapon;
+import com.narxoz.rpg.equipment.Armor;
+
 public class Warrior implements Character {
 
     private String name;
@@ -28,11 +31,11 @@ public class Warrior implements Character {
     public int getHealth(){
         return health;
     }
-    public int GetMana(){
+    public int getMana(){
         return mana;
     }
     public int getStrength(){
-        return Strength;
+        return strength;
     }
     public int getIntelligence(){
         return intelligence;

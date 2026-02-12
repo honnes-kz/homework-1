@@ -36,16 +36,19 @@ public class WizardStaff implements Weapon{
         this.manaBoost = 40;
     }
     public int getDamage(){
-        return Damage;
+        return damage;
     }
     public String getWeaponType(){
         return weaponType;
     }
+    public String getWeaponName(){  
+        return "Wizard Staff";
+    }
     public String getWeaponInfo(){
-        return "Wizard Staff (Magic) - a staff infused with magical energy";
+        return "Wizard Staff (Magic) - infused with magical energy";
     }
     public void displayInfo(){
-        System.out.println("Weapon: " + getWeaponInfo);
+        System.out.println("Weapon: " + getWeaponInfo());
         System.out.println("Damage: " + damage);
         System.out.println("ManaBoost" + manaBoost);
         System.out.println("Type: " + weaponType);
@@ -67,6 +70,9 @@ public class Longbow implements Weapon{
     }
     public String getWeaponType(){
         return weaponType;
+    }
+    public String getWeaponName(){
+        return "LongBow";
     }
     public String getWeaponInfo(){
         return "LongBow (Ranger) - A precise ranged weapon";

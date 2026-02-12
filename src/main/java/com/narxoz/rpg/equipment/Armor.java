@@ -8,7 +8,6 @@ public interface Armor {
     String getArmorType();
     
 }
-
 public class MedievalArmor implements Armor{
 
     private String name;
@@ -16,9 +15,9 @@ public class MedievalArmor implements Armor{
     private String type;
 
     public MedievalArmor(){
-        this.name = "Steel Plate Armor"
+        this.name = "Steel Plate Armor";
         this.defense = 50;
-        this.type = "Heavy"
+        this.type = "Heavy";
     }
 
     public int getDefense(){
@@ -58,4 +57,4 @@ public class MagicArmor implements Armor{
     public String getArmorInfo(){
         return name + "type:" + type + "defense" +defense; 
     }
-} 
+}

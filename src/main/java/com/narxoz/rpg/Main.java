@@ -7,19 +7,16 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("=== RPG Character & Equipment System ===\n");
 
-        // ===== CREATE CHARACTERS =====
         Warrior warrior = new Warrior("Thor");
         Mage mage = new Mage("Merlin");
         Assassin assassin = new Assassin("Ezio");
 
-        // ===== CREATE EQUIPMENT =====
         Weapon sword = new IronSword();
         Weapon staff = new WizardStaff();
 
         Armor medievalArmor = new MedievalArmor();
         Armor magicArmor = new MagicArmor();
 
-        // ===== EQUIP CHARACTERS =====
         warrior.equipWeapon(sword.getWeaponName());
         warrior.equipArmor(medievalArmor.getArmorName());
 
@@ -31,7 +28,6 @@ public class Main {
 
         System.out.println();
 
-        // ===== DISPLAY INFO =====
         warrior.displayStats();
         warrior.displayEquipment();
         warrior.useSpecialAbility();
@@ -47,6 +43,12 @@ public class Main {
         assassin.displayStats();
         assassin.displayEquipment();
         assassin.useSpecialAbility();
+
+        System.out.println("UML Design");
+        System.out.println("Character->Assassin,Mage,Warrior");
+        System.out.println("Armor->MagicArmor,MedivalArmor");
+        System.out.println("Weapon->WizardStaff,IronSword,Longbow");
+
 
         System.out.println("\n=== Demo Complete ===");
     }
